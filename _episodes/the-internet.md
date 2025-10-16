@@ -18,7 +18,7 @@ keypoints:
 - "[**Ports**](../reference#port) allow computers and routers to differentiate types network traffic."
 ---
 
-To put cloud computing into perspective, lets first take a look at how your personal computer interacts with the Internet. A first model of what the internet looks like might be something like a bunch of computers connected together with the Internet being the glue that connects them together into a [**computer network**](../reference#computer-network) allowing them to share resources and exchange data.
+Before getting into what cloud computing is lets go over a little background by taking a look at how your personal computer interacts with the Internet. A first model of what the internet looks like might be something like a bunch of computers connected together with the Internet being the glue that connects them together into a [**computer network**](../reference#computer-network) allowing them to share resources and exchange data.
 
 ![the internet](../fig/the-internet.svg)
 
@@ -34,7 +34,7 @@ Within a LAN or local area network, IP addresses often have the form `192.168.##
 
 ## Layers of Networks
 
-Many of these local area networks exist around the world and the Internet connects these smaller networks together which is where the name Internet comes from, interconnected network (Internet).
+Many local area networks exist around the world and the Internet connects these smaller networks together which is where the name Internet comes from, interconnected network (Internet).
 
 ![interconnected networks](../fig/interconnected-networks.svg)
 

@@ -69,27 +69,10 @@ episode_order:
   - introduction
   - the-internet
   - the-cloud
+  - break
   - creating-a-keypair
   - create-a-persistent-virtual-machine
   - security-updates
-
-# - create-a-persistent-virtual-machine
-#  - intro-to-jekyll
-#  - install-mysql
-#  - install-php
-#  - SSL-encryption
-#  - create-a-wordpress-site
-#  - os-command-line-setup
-#  - os-command-line-client
-#  - intro-to-cloud-init
-#  - bash-cloud-init
-#  - yaml-syntax
-#  - wo-cloud-init
-#  - using-hots
-#  - creating-hots
-#  - your-project-I
-#  - your-project-II
-#  - your-project-III
   
 # Turn off built-in syntax highlighting.
 highlighter: false

@@ -6,7 +6,7 @@ permalink: /setup/
 
 This page describes setup that should preferably be done before you arrive at the course to help make the best use of your class time. The course exercises will be done on **your personal laptop** to better allow you to continue using what you learn in the course after you leave.
 
-We will provide guest accounts in a shared project on the Alliance Arbutus cloud that we can use during the course. If you would rather work in your own OpenStack project for the course you can request an alliance account and a cloud project if you don't already have one, however it can take several days to get an account and project. See [getting an alliance account](../alliance_account) for more details on doing that.
+We will provide guest accounts in a shared project on an Alliance cloud that we will use during the course.
 
 ## Ensure you can open a terminal
 
