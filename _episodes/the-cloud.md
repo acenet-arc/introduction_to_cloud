@@ -42,7 +42,7 @@ There are many different providers of cloud services for example, [Amazon Web Se
 
 ## Cloud Service Models
 
-So far we have been talking about clouds providing virtual devices as a service, also known as [**Infrastructure as a Service (IaaS)**](../reference#iaas). Which means the cloud provider is providing the virtualized hardware as a service. One of the benefits of IaaS is that you don't have to ensure the physical hardware keeps working, the IaaS provider takes care of that for you. If instead you ran your own server for your website and a disk fails you would be responsible for replacing it and ensuring that there was no data loss. IaaS removes the requirement to actually manage the hardware. Managing the operating system and software is the responsibility of the user of the service. Infrastructure as a service allows the greatest amount of flexibility and power to configure and setup your computing environment as you like apart from actually managing the hardware yourself. With this great flexibility comes the responsibility to ensure that security patches and operating system updates are applied and that backups are made in case of disaster. This service model also requires that the user understand how to setup and configure their environments.
+So far we have been talking about clouds providing virtual devices as a service, also known as [**Infrastructure as a Service (IaaS)**](../reference#iaas). Which means the cloud provider is providing the virtualized hardware as a service. One of the benefits of IaaS is that you don't have to ensure the physical hardware keeps working, the IaaS provider takes care of that for you. If instead you ran your own server for your website and a disk fails you would be responsible for replacing it and ensuring that there was no data loss. IaaS removes the requirement to actually manage the hardware. Managing the operating system and software is the responsibility of the user of the service. Infrastructure as a service allows the greatest amount of flexibility and power to configure and setup your computing environment as you like apart from actually managing the hardware yourself. With this great flexibility comes the responsibility to ensure that security patches and operating system updates are applied and that backups are made in case of disaster. This service model also requires that the user understand how to setup, configure, and maintain their environments.
 
 There are several other service models that are possible with clouds ranging form IaaS to [**Software as a Service (SaaS)**](../reference#saas) at the other end of the spectrum, where software services, such as Gmail or Facebook, are provided.  In the middle of these two extremes is [**Platform as a Service (PaaS)**](../reference#paas) which provides an environment already configured with the tools required to develop software. An example of PaaS would be a high performance computing (HPC) environment where programming languages and libraries are installed and configured to allow the user to dive into writing code to solve their problem.
 
@@ -51,10 +51,10 @@ There are several other service models that are possible with clouds ranging for
 
 ## Why Alliance Cloud?
 
-First and for most it is a free service offered to faculty, librarians, researchers, post docs, and students at academic institutions across Canada so many may continue to use the Alliance cloud after this workshop. Second we have easy access to the resources and experts who create and maintain the Alliance Cloud. Third the Alliance cloud uses [**OpenStack**](../reference#openstack) which is a popular widely used open source cloud operating system. Many of the concepts you will learn while working with the Alliance cloud will be applicable to many other cloud providers such as AWS and Azure with the notable exception of how those cloud providers monitor usage and bill for usage as the Alliance Cloud does not bill users but instead has resource allocation competitions [RAC](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition) to gain access to resource above the levels available through our Rapid Access Service [RAS](https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations) which any new cloud project can access.
+First and for most it is a free service offered to faculty, librarians, researchers, post docs, and students at academic institutions across Canada so many may continue to use the Alliance cloud after this workshop. Second we have easy access to the resources and experts who create and maintain the Alliance Cloud. Third the Alliance cloud uses [**OpenStack**](../reference#openstack) which is a popular widely used open source cloud operating system. Many of the concepts you will learn while working with the Alliance cloud will be applicable to many other cloud providers such as AWS and Azure with the notable exception of how those cloud providers monitor usage and bill for usage as the Alliance Cloud does not bill users but instead has resource allocation competitions [RAC](https://docs.alliancecan.ca/wiki/Resource_Allocation_Competition) to gain access to resource above the levels available through our Rapid Access Service [RAS](https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations) which any new cloud project can access.
 
 ## OpenStack
-If you have an Alliance cloud project at Arbutus you can login to the OpenStack dashboard (a.k.a Horizon) at the [Arbutus login page](https://arbutus.cloud.computecanada.ca/) or if you have a project on another Alliance cloud you can find the login url on the "Using the Cloud" section of our [main cloud docs page](https://docs.alliancecan.ca/wiki/Cloud#Using_the_Cloud). Using any Alliance cloud should be fine though there maybe slight differences as some of our clouds use different versions of OpenStack and some have different security protocols (see [CC Cloud Resources](https://docs.alliancecan.ca/wiki/CC-Cloud_Resources) for current Alliance cloud OpenStack versions and hardware specs).
+If you have an Alliance cloud project at Arbutus you can login to the OpenStack dashboard (a.k.a Horizon) at the [Arbutus login page](https://arbutus.cloud.computecanada.ca/) or if you have a project on another Alliance cloud you can find the login url on the "Cloud systems" section of our [main cloud docs page](https://docs.alliancecan.ca/wiki/Cloud#Cloud_systems). Using any Alliance cloud should be fine though there maybe slight differences as some of our clouds use different versions of OpenStack and some have different security protocols (see [CC Cloud Resources](https://docs.alliancecan.ca/wiki/CC-Cloud_Resources) for current Alliance cloud OpenStack versions and hardware specs).
 
 #### Different ways to participate in this workshop:
 
@@ -73,7 +73,7 @@ Once you login to the OpenStack dashboard you will be presented with the "Overvi
 This panel shows you an overview (go figure) of your current project's usage and quota on OpenStack. An OpenStack user can be associated with **multiple projects** each project has their own quota and a project can have multiple users. Your project's OpenStack quota dictates the maximum number of VM instances, [**VCPU**](../reference#vcpu)s, RAM, Floating IPs, Security Groups, Volumes, and Volume/Snapshot Storage you may use within that project.
 
 > ## Require more resources?
-> If you require an increase in your project quota and you are use our RAS and your new requirement still doesn't exceed our [cloud RAS limits](https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations) you can request an increase in the same way as you originally requested our cloud RAS [here](https://docs.alliancecan.ca/wiki/Cloud#Getting_a_Cloud_project). If you require more resources than are available through RAS you can apply for a [RAC](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition) which occur annually, generally in the fall semester.
+> If you require an increase in your project quota and you are use our RAS and your new requirement still doesn't exceed our [cloud RAS limits](https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations) you can request an increase in the same way as you originally requested our cloud RAS [here](https://docs.alliancecan.ca/wiki/Cloud#Getting_a_Cloud_project). If you require more resources than are available through RAS you can apply for a [RAC](https://docs.alliancecan.ca/wiki/Resource_Allocation_Competition) which occur annually, generally in the fall semester.
 {: .callout}
 
 In the top right corner there is a drop down menu where you can access account settings and the sign out link. At the top left the current active project is displayed and a drop down menu can be used to switch between projects if you are a member of multiple projects.
@@ -95,6 +95,10 @@ The "Instances" panel shows all running instances and information about those in
 
 There are a number of public images provided by the Alliance Cloud to be used as starting points for virtual machines (for example and image containing the Ubuntu Linux operating system) and will be periodically updated as new releases come out. These image names typically have the format `<OS-name>`-`<OS-version>`-`<OS-version-name>`-`<architecutre>`-`<date>`. Examples of `<OS-name>` are "Ubuntu", "Centos", "Fedora", "Debian" which are different Linux distributions. `<OS-version>` might look something like "37-1.7" or "20.04.5". `<OS-version-name>` might be something like 'Buster', but not all Linux distributions use version names so not all images provided by the Alliance team will have those. `<architecutre>` is often "x64" to indicate the operating systems are 64-bit.
 
+> ## Moving Images, a word of caution
+> While as mentioned it is possible to move images from one location to an other, for example between an Alliance cloud and run in virtual box on your laptop, not all images are suitable to run in all environments. For example, images used with OpenStack clouds must have [cloud-init](https://cloud-init.io/) installed and be configured to work with OpenStack (see: [OpenStack image guide](https://docs.openstack.org/image-guide/) ). It is also important when re-using cloud images to "clean" them, or in other words remove information like public keys, host keys, etc.
+{: .callout}
+
 <img src="../fig/os-screens/OpenStack_dashboard_images.png" alt="OpenStack Dashboard Images" style="width: 100%;"/>
 
 ### Security Groups
@@ -102,11 +106,11 @@ There are a number of public images provided by the Alliance Cloud to be used as
 Your VM can belong to a number of security groups. A **security group** contains a collection of rules that limit how connections can be made to and from the VMs belonging to that security group. These rules can limit how your VMs:
 * access the internet
 * access other VMs in the OpenStack project
-* how other computers can access VMs from the internet
+* how other computers can access VMs from the Internet
 
 New projects all start with a default security group which contains some basic rules. These rules allow VMs full access out to the internet and between VMs belong to that security group but do not allow connections originating outside of that security group to access the VMs.
 
-Security group rules often pertain to specific ports or ranges of ports and allow access into or out of VMs for specific types of traffic, e.g. HTTP (port 80), HTTPS (port 442).
+Security group rules often pertain to specific ports or ranges of ports and allow access into or out of VMs for specific types of traffic, e.g. HTTP (port 80), HTTPS (port 443).
 
 <img src="../fig/os-screens/OpenStack_dashboard_security_groups.png" alt="OpenStack Dashboard Images" style="width: 100%;"/>
 
@@ -151,8 +155,8 @@ Security group rules often pertain to specific ports or ranges of ports and allo
 >
 > Hint: look at the "Images" panel under the "Compute" section on the left hand menu of the OpenStack dashboard.
 > > ## Solution
-> > Go to 'Compute' then 'Images' to find the `Ubuntu-22.04.2-Jammy-x64-2023-02' image, and note that the middle portion '22.04.2' is the Ubuntu operating system version.
-> > Ubuntu 22.04.2
+> > Go to 'Compute' then 'Images' to find the `Ubuntu-24.04-Noble-x64-2024-06' image, and note that the middle portion '24.04' is the Ubuntu operating system version.
+> > Ubuntu 24.04
 > {: .solution}
 {: .challenge}
 

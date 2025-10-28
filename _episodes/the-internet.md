@@ -46,7 +46,7 @@ To connect your LAN to the rest of the Internet your router is connected to an I
 {: .callout}
 
 ## Ports
-If your neighbour wanted to share some information with you on a website located on his device with local address `192.168.1.103` how could your computer know to connect to that device to get that information? If you know the IP address of your neighbour's router (`206.113.222.122`) you could uniquely identify your neighbours LAN, but how to route the request for their website to the local device? Your neighbour must configure their router to forward traffic (data being sent back and forth) to the device with local address `192.168.103`, but which traffic? What if your neighbour wanted some information to be routed to one device and other information to be routed to another? The solution to this issue is to use [**ports**](../reference#port). Different types of information requests are associated with different ports and the local network router can be configured to forward a request associated with certain port to a specific device (known as [**port forwarding**](../reference#port-forwarding)). In the case of a website the convention is to use port 443 or 80 depending on weather the data sent and received is encrypted (443) or not (80). So your neighbour would setup a rule on their router to forward traffic arriving on port 80 and or 443 to the server running the website at the local address 192.168.1.103.
+If your neighbour wanted to share some information with you on a website located on his device with local address `192.168.1.103` how could your computer know to connect to that device to get that information? If you know the IP address of your neighbour's router (`206.113.222.122`) you could uniquely identify your neighbours LAN, but how to route the request for their website to the local device? Your neighbour must configure their router to forward traffic (data being sent back and forth) to the device with local address `192.168.103`, but which traffic? What if your neighbour wanted some information to be routed to one device and other information to be routed to another? The solution to this issue is to use [**ports**](../reference#port). Different types of information requests are associated with different ports and the local network router can be configured to forward a request associated with a certain port to a specific device (known as [**port forwarding**](../reference#port-forwarding)). In the case of a website the convention is to use port 443 or 80 depending on weather the data sent and received is encrypted (443) or not (80). So your neighbour would setup a rule on their router to forward traffic arriving on port 80 and or 443 to the server running the website at the local address 192.168.1.103.
 
 You can combine IP address and ports with a `:` for example `206.113.222.122:80` could be entered into your web-browser to access a website on your neighbours device with local IP `192.168.1.103` once your neighbour configured their router to forward requests on port 80 to that device.
 
@@ -58,7 +58,7 @@ When we start using the cloud you will have a virtual local area network, or pri
 
 All the services you access over the Internet work by using IP address and ports to access another computer connected to the Internet which provides your computer with information (text, audio, video) stored on another computer.
 
-But when you want to go to a website you don't usually enter an IP address usually something like `google.ca`. This is what is known as a [**domain name**](../reference#domain-name). Domain names can be purchased from a domain name registrar (e.g. godaddy.com, rebel.ca). The domain name can then be linked to an IP address and requests to a domain name are translated to requests to an IP address. Domain name registrars run servers (special purpose computers) which do these domain name to IP address translations which are known as Domain Name Servers ([**DNS**](../reference#dns)).
+But when you want to go to a website you don't usually enter an IP address, instead you usually enter something like `google.ca`. This is what is known as a [**domain name**](../reference#domain-name). Domain names can be purchased from a domain name registrar (e.g. godaddy.com, rebel.ca). The domain name can then be linked to an IP address and requests to a domain name are translated to requests to an IP address. Domain name registrars run servers (special purpose computers) which do these domain name to IP address translations which are known as Domain Name Servers ([**DNS**](../reference#dns)).
 
 The `.ca` part of `google.ca` domain name is known as the top level domain name. Within a given domain you can have many sub-domains for example `google` is a sub-domain of the `ca` domain and `translate` is sub-domain of the `google.ca` domain. Each additional sub domain given to the left of the top level domain name can be referred to by the depth they are to the left, for example `google` is a second level domain name, and `translate` is a third level domain name.
 
@@ -78,13 +78,17 @@ A [**hostname**](../reference#hostname) identifies a specific device on a networ
 > 1. open command prompt by searching "cmd.exe" in the start menu
 > 2. type `ipconfig`
 >
-> If using Linux or Mac:
-> 1. open the terminal (try searching for `terminal`)
+> If using a Mac:
+> 1. open the terminal (try searching for `terminal` with spotlight)
 > 2. type `ifconfig`
+>
+> If using a Linux:
+> 1. open the terminal (try searching for `terminal`)
+> 2. type `ip addr`
 >
 > Depending on the network configuration you may or may not see the same IP as listed at [ipv4.icanhazip.com](http://ipv4.icanhazip.com/) why or why not?
 > > ## Solution
-> > * If you see a different IPs, does the IP you see with either `ifconfig` or `ipconfig` look something like `192.168.XXX.YYY`. If so, you are likely on a local network and connecting the the Internet through a gateway, such as a router. This is likely what you would see at home if you have a router connected to your modem.
+> > * If you see different IPs, is there an IP that look something like `192.168.XXX.YYY`. If so, you are likely on a local network and connecting the the Internet through a gateway, such as a router. This is likely what you would see at home if you have a router connected to your modem.
 > > * If you see the same IP it likely means you are either directly connect to your ISP modem, or your institution provides unique public IPs for devices connected on their network.
 > > You likely just see a local or LAN IP address on the command line, while from [ipv4.icanhazip.com](http://ipv4.icanhazip.com/) you will see the IP address given to the router you are connecting to the Internet through.
 > {: .solution}

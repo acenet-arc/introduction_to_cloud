@@ -57,7 +57,7 @@ You can create a VM which boots from an Image, volume, or snapshot. Since we don
 
 **Delete Volume on Instance Delete:** No
 
-Select the `Ubuntu-22.04.2-Jammy-x64-2023-02` image by clicking on the arrow pointing upwards next to it so that it appears under `Allocated`.
+Select the `Ubuntu-24.04.2-Noble-x64-2025-03` image by clicking on the arrow pointing upwards next to it so that it appears under `Allocated`.
 
 ### Flavor tab
 The [**flavor**](../reference#flavor) of your VM specifies the hardware profile your VM will have. Alliance clouds use a consistent naming scheme across their clouds to describe the hardware profile.  Examples of VM flavors are `p1-1.5gb` and `c1-7.5gb-30` and the different components of the name correspond to different hardware features.
@@ -72,12 +72,12 @@ The [**flavor**](../reference#flavor) of your VM specifies the hardware profile 
 
 * The final number, which only occurs in flavors starting with a `c`, is the size in GB of an extra [**ephemeral disk**](../reference#ephemeral-disk) in addition to the disk that the virtual machine's operating system resides. This extra disk can be used to store temporary data, but will be lost once the virtual machine is deleted unless special care has been taken to save it else where.
 
-We will use the `p1-1.5gb` flavor. Click the arrow pointing up in the row for that flavor.
+We will use the `p1-1gb` flavor. Click the arrow pointing up in the row for that flavor.
 
-**Flavor**: `p1-1.5gb`
+**Flavor**: `p1-1gb`
 
 > ## Flavor variations
-> If you are on a different Compute Canada cloud, such as East cloud, you might have a different set of flavors, however you should still be able to pick something relatively close to this one. For example on East cloud a `p1-0.75gb` flavor has about half the RAM but the same number of VCPUs and is also a persistent flavor. For this workshop this flavor will work just as well.
+> If you are on a different Alliance cloud, such as Arbutus cloud, you might have a different set of flavors, however you should still be able to pick something relatively close to this one. For example on Arbutus cloud a `p1-1.5gb` flavor has 50% more RAM but the same number of VCPUs and is also a persistent flavor. For this workshop this flavor will work just as well.
 {: .callout}
 
 ### Networks tab
@@ -88,17 +88,17 @@ Arbutus cloud now supports both IPv4 and the newer IPv6 protocols. Each of these
 The final piece of information we need to provide before creating a VM is the public key we created in the previous episode to allow you to connect to the VM you create. Click on the `Import Key Pair` to bring up a dialogue allowing you to specify the key pair name, type, and the public key itself. You can copy your public key text by going to your terminal on your laptop where you created your key pair in the last episode and running the command
 
 ~~~
-$ cat .ssh/id_rsa.pub
+$ cat .ssh/id_ed25519.pub
 ~~~
 {: .bash}
 ~~~
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxo6H/dDFLunQOUKnTUxNfHTsDfARFdFjqyJrf2udOBAzm7hg/w4SaHAqF1b1DvmGhwKwXW6lXYkdsiA5d4IK/Cg8GZ7l74J1QTQ+e6JkdvOmVlTGnu6PTesd++6jZUeiF9Im0ksGPTYo8QH/5k1eHUMwWpUh9xfX0Z56IdUyNxx+/QaeCc61sUvIPf+w2Vm/zC44C+v5OX4lDWlamLf2b0u6be5L99UXWN8741354auMP8qVMidRq8jQjUmlto30b/2H9bMFGQ63eEApEnhe6s+qdxVlbLkKHT2H905ydXf4knAY3TGlgylBNbXjeiJEp9mKlQ5LnIi6rayxzDrIv cgeroux@Caelia
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIa5jUxyRcjFC+9VVc6Pns6L/FSPs9lWxjPBTRCFHWSl user@host
 ~~~
 {: .output}
 
 and copying this text into the *Public Key* text field on the OpenStack dashboard. Provide a *Key Pair Name* which will distinguish this key from other keys you might have, something like `laptop-key` or `work-desktop-key` and the *Key Type* is 'SSH Key'.
 
-Then click the *Import Key Pair* button to add that public key to your OpenStack account. This public key can then be selected from list of key pairs below by clicking on the up arrow next to the key-pair name. This public key can also be used for other future virtual machines and across projects.
+Then click the *Import Key Pair* button to add that public key to your OpenStack account. Note that key pairs stored in OpenStack are associated with your account and not a project. This public key can then be selected from list of key pairs below by clicking on the up arrow next to the key-pair name. This public key can also be used for other future virtual machines and across projects.
 
 Finally click the *Launch Instance* button at the bottom of the *Launch Instance* panel to create your first virtual machine!
 
